@@ -23,7 +23,7 @@ export class AvatarRepository {
   }
 
   async findAvatarByUserId(id: number) {
-    const result = await this.avatarModel.findOne({ where: { id } });
-    return this.presenterIdAvatar.presenter(result);
+    const result = await this.avatarModel.findOne({ id });
+    return Boolean(result);
   }
 }
