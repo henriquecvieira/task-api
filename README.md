@@ -9,6 +9,7 @@ This project consists of a simple REST application, created from scratch using t
 
 ## API documentation
 
+
 #### Returns all items created from Database
 
 ```http
@@ -21,7 +22,7 @@ This project consists of a simple REST application, created from scratch using t
   GET / http://localhost:3000/{id}/avatar
 ```
 
-| Parâmetro | Tipo     | Descrição                                  |
+| parameter | type     | description                                  |
 | :-------- | :------- | :----------------------------------------- |
 | `id`      | `number` | **Mandatory**. The ID of the item you want |
 
@@ -31,7 +32,7 @@ This project consists of a simple REST application, created from scratch using t
   GET / http://localhost:3000/users/{id}
 ```
 
-| Parâmetro | Tipo     | Descrição                                  |
+| parameter | type     | description                                  |
 | :-------- | :------- | :----------------------------------------- |
 | `id`      | `number` | **Mandatory**. The ID of the item you want |
 
@@ -41,7 +42,7 @@ This project consists of a simple REST application, created from scratch using t
   POST /  http://localhost:3000/users
 ```
 
-| Parâmetro | Tipo              | Descrição             |
+| parameter | type              | description             |
 | :-------- | :---------------- | :-------------------- |
 | `object`  | `number & string` | **Mandatory** object. |
 
@@ -61,7 +62,7 @@ This project consists of a simple REST application, created from scratch using t
   DELETE /  http://localhost:3000/users/{_id}
 ```
 
-| Parâmetro | Tipo     | Descrição                       |
+| parameter | type     | description                       |
 | :-------- | :------- | :------------------------------ |
 | `_id`     | `string` | **Mandatory** and must be \_id. |
 
