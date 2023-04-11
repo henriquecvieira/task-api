@@ -105,7 +105,11 @@ start the server
 
 ## Important to notice:
 
-No unit tests or integration tests will be done.
+#to verify applications on swagger, go to link below:
+
+```bash
+http://localhost:3000/api
+```
 
 ## 🔗 Links
 
