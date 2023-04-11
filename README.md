@@ -109,7 +109,7 @@ start the server
 
 <http://localhost:3000/api>
 
-image.png
+![Screenshot](screenshot.PNG)
 
 ## 🔗 Links
 
