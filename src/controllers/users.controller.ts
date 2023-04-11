@@ -9,6 +9,8 @@ import { UserValidator } from '../validators/user.validator';
 import { UserException } from '../validators/user.exception';
 import { validateUser } from '../modules/schema/schemaValidator/createUserSchemaValidator';
 import { ApiBody, ApiTags } from '@nestjs/swagger';
+import { ApiExcludeEndpoint } from '@nestjs/swagger';
+
 @ApiTags('users')
 @Controller('users')
 export class UserController {
@@ -27,6 +29,8 @@ export class UserController {
   async findById(@Param('id', ParseIntPipe) id: number): Promise<{}> {
     return this.userService.findById(id);
   }
+
+  @ApiExcludeEndpoint()
   @Get(':_id')
   async getById(@Param('_id', ParseIntPipe) _id: string): Promise<{}> {
     return this.userRepository.getById(_id);

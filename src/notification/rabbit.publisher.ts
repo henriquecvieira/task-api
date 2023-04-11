@@ -14,7 +14,7 @@ export class Publisher {
     this.channel = await this.connection.createChannel();
 
     await this.channel.assertExchange(this.exchange, 'fanout', {
-      durable: true,
+      durable: false,
     });
     await this.channel.assertQueue('my-queue');
     await this.channel.bindQueue('my-queue', this.exchange, '');
