@@ -93,7 +93,7 @@ To run this project, you need to have the following software installed:
 Clone the project
 
 ```bash
-  git clone https://github.com/henriquecvieira/api-task-latam.git
+  git clone https://github.com/henriquecvieira/task-api.git
 ```
 
 install the dependencies
