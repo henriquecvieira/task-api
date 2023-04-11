@@ -69,11 +69,11 @@ This project consists of a simple REST application, created from scratch using t
 
 To run this project, you need to add the following environment variables in your .env file:
 
-| variables      | description                                  |
-| -------------- | -------------------------------------------- |
-| `MONGO_URL`    | The MongoDB connection string.               |
-| `RABBITMQ_URL` | The RabbitMQ connection string.              |
-| `PASS`         | The password used to authenticate with SMTP. |
+| variables      | description                                                            |
+| -------------- | ---------------------------------------------------------------------- |
+| `MONGO_URL`    | The MongoDB connection string.                                         |
+| `RABBITMQ_URL` | The RabbitMQ connection string / 'amqp://user:pass@rabbitmq_host:5672' |
+| `PASS`         | The password used to authenticate with SMTP.                           |
 
 ## Instructions to create the password at link:
 
