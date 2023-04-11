@@ -1,5 +1,5 @@
 import { User } from '../modules/schema/user.schema';
-import { CreateUserDto } from '../interfaces/CreateUserDto';
+import { CreateUserDto } from '../interfaces/Create-User.dto';
 export class PresenterCreateUserDto {
   async presenter(user: User): Promise<CreateUserDto> {
     return {

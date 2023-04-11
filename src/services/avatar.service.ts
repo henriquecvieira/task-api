@@ -20,14 +20,10 @@ export class AvatarService {
     try {
       const response = await axios.get(url);
       const base64Image = await this.convertImage.getBase64Image(response.data.data.avatar);
-
-      // Verifica se o avatar já existe no banco de dados
       const existingAvatar = await this.avatarRepository.findAvatarByUserId(userId);
       if (existingAvatar) {
         return;
       }
-
-      // Se não existe, cria e salva o novo avatar
       return this.avatarRepository.saveAvatar(userId, base64Image);
     } catch (err: any) {
       throw err;
@@ -60,9 +56,9 @@ export class AvatarService {
       const base64Image = await this.convertImage.getBase64Image(data.avatar);
       const existingAvatar = await this.avatarRepository.findAvatarByUserId(id);
       if (!existingAvatar) {
-        return this.avatarRepository.saveAvatar(data.id, base64Image);
+        await this.avatarRepository.saveAvatar(data.id, base64Image);
+        return this.presenterIdAvatar.presenter(data);
       }
-
       return this.presenterIdAvatar.presenter(data);
     } catch (err: any) {
       console.log(err);

@@ -5,7 +5,10 @@ import { AvatarService } from '../services/avatar.service';
 import { Avatar } from '../modules/schema/avatar.schema';
 import { Validator } from '../validators/avatar.validator';
 import { AvatarRepository } from '../repositories/avatar.repository';
+import { ApiTags } from '@nestjs/swagger';
+import { ApiExcludeEndpoint } from '@nestjs/swagger';
 
+@ApiTags('avatar')
 @Controller()
 export class AvatarController {
   constructor(
@@ -25,6 +28,7 @@ export class AvatarController {
     return this.avatarService.getImageById(id);
   }
 
+  @ApiExcludeEndpoint()
   @Get('/avatar/:id')
   async getAvatarById(@Param('id', ParseIntPipe) id: number, @Res() res: Response) {
     const avatar = await this.avatarService.findById(id);

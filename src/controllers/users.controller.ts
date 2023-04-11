@@ -3,12 +3,13 @@ import { CreateInput } from '../interfaces/CreateInput';
 import { User } from '../modules/schema/user.schema';
 import { UserService } from '../services/users.service';
 import { UserRepository } from '../repositories/user.repository';
-import { CreateUserDto } from '../interfaces/CreateUserDto';
+import { CreateUserDto } from '../interfaces/Create-User.dto';
 import { DeleteUserDto } from '../interfaces/DeleteUserDto';
 import { UserValidator } from '../validators/user.validator';
 import { UserException } from '../validators/user.exception';
 import { validateUser } from '../modules/schema/schemaValidator/createUserSchemaValidator';
-
+import { ApiBody, ApiTags } from '@nestjs/swagger';
+@ApiTags('users')
 @Controller('users')
 export class UserController {
   constructor(
@@ -32,6 +33,7 @@ export class UserController {
   }
 
   @Post()
+  @ApiBody({ type: CreateUserDto })
   async create(@Body() input: CreateInput): Promise<CreateUserDto> {
     try {
       await validateUser(input);

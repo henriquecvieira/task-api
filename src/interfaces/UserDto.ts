@@ -1,4 +1,4 @@
-export interface UserDto {
+export class UserDto {
   id: number;
   email: string;
   first_name: string;

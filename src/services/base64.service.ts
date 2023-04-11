@@ -6,7 +6,6 @@ export class ConvertImage {
       responseType: 'arraybuffer',
     });
     const base64 = Buffer.from(response.data).toString('base64');
-    // console.log(base64);
     return base64;
   }
 }

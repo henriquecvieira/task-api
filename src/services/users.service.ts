@@ -10,7 +10,7 @@ import { PresenterCreateUserDto } from '../Presenter/presenterCreateUserDto';
 import { PresenterDeleteUserDto } from '../Presenter/presenterDeleteUserDto';
 import { RabbitMQService } from '../notification/rabbitmq.service';
 import { Validator } from '../validators/avatar.validator';
-import { CreateUserDto } from '../interfaces/CreateUserDto';
+import { CreateUserDto } from '../interfaces/Create-User.dto';
 import { DeleteUserDto } from '../interfaces/DeleteUserDto';
 import { validateUser } from '../modules/schema/schemaValidator/createUserSchemaValidator';
 
@@ -46,8 +46,8 @@ export class UserService {
       if (validationResult !== true) {
         throw new BadRequestException(validationResult);
       }
-      // SendEmailService.sendEmail();
-      // this.sendMessage('created user succesfully!');
+      SendEmailService.sendEmail();
+      this.sendMessage('created user succesfully!');
       const saveInDb = await this.userRepository.createUser(user);
       return this.presenterCreateUserDto.presenter(user);
     } catch (err: any) {

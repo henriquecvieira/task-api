@@ -13,7 +13,7 @@ const userSchemaValidation = {
     name: {
       type: 'string',
       minLength: 2,
-      pattern: '^[a-zA-ZçÇãÃáÁàÀâÂäÄéÉêÊëËíÍìÌîÎïÏõÕóÓòÒôÔöÖúÚùÙûÛüÜñÑçÇ~^´`]+$',
+      pattern: '^[a-zA-ZçÇãÃáÁàÀâÂäÄéÉêÊëËíÍìÌîÎïÏõÕóÓòÒôÔöÖúÚùÙûÛüÜñÑçÇ~^´` ]+$',
     },
     job: { type: 'string', minLength: 1 },
     createdAt: { type: 'string', format: 'date-time' },
