@@ -105,7 +105,8 @@ start the server
 
 ## Important to notice:
 
-##to verify applications on swagger, go to link below:
+to verify theendpoints on swagger, go to link below.
+but certify you start the application first
 
 <http://localhost:3000/api>
 
