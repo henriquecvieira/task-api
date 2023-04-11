@@ -44,7 +44,7 @@ This project consists of a simple REST application, created from scratch using t
 
 ```
 {
-    "name": "theo",
+    "name": "Theo Vieira",
     "job": "guitar player"
 }
 
@@ -105,11 +105,11 @@ start the server
 
 ## Important to notice:
 
-#to verify applications on swagger, go to link below:
+##to verify applications on swagger, go to link below:
 
-```bash
-http://localhost:3000/api
-```
+<http://localhost:3000/api>
+
+image.png
 
 ## 🔗 Links
 

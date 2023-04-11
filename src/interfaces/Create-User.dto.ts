@@ -8,7 +8,7 @@ export class CreateUserDto {
   _id: string;
 
   @ApiProperty({
-    example: 'John Doe',
+    example: 'Theo Vieira',
     description: `name to be entered for user creation`,
   })
   name: string;
