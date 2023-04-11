@@ -1,6 +1,11 @@
 # BackEnd task
 
-This project consists of a simple REST application, created from scratch using the NestJS framework. The application is responsible for communicating with the nodeJS server API available at https://reqres.in/, implementing four endpoints: POST /api/users, GET /api/user/{userId}, GET /api/user/ {userId}/avatar and DELETE /api/user/{userId}/avatar.
+This project consists of a simple REST application, created from scratch using the NestJS framework. The application is responsible for communicating with the nodeJS server API available at https://reqres.in/, implementing four endpoints:
+
+- POST /api/users
+- GET /api/user/{userId}
+- GET /api/user/{userId}/avatar
+- DELETE /api/user/{userId}/avatar
 
 ## API documentation
 
@@ -64,11 +69,11 @@ This project consists of a simple REST application, created from scratch using t
 
 To run this project, you need to add the following environment variables in your .env file:
 
-| variables                                             |
-| ----------------------------------------------------- |
-| `MONGO_URL`=mongodb://127.0.0.1:27017/api-latam       |
-| `RABBITMQ_URL`= 'amqp://user:pass@rabbitmq_host:5672' |
-| `PASS` = 'your-password'                              |
+| variables      | description                                  |
+| -------------- | -------------------------------------------- |
+| `MONGO_URL`    | The MongoDB connection string.               |
+| `RABBITMQ_URL` | The RabbitMQ connection string.              |
+| `PASS`         | The password used to authenticate with SMTP. |
 
 ## Instructions to create the password at link:
 
